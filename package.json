@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/SummySumanth/breadcrumb-Navigation#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
