@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "simple react app to show react navigation in breadcrumb style",
   "main": "index.js",
+  "engines": {
+    "node": "10.3.0"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
