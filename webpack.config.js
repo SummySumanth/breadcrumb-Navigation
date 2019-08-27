@@ -7,17 +7,40 @@ module.exports = {
     path: __dirname + '/build',
     filename: 'bundle.js'
   },
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules:[
-      {test: /\.js$/,
+      {
+        test: [/\.js$/,/\.jsx$/,],
         exclude: /node_modules/,
-        use: {loader: "babel-loader"}},
-      {test:/\.css$/,use: ["style-loader", "css-loader"]},
-      {test:[/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader:require.resolve("url-loader"),
-        options:{limit: 10000,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader"
+        ]
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: require.resolve("url-loader"),
+        options: {
+          limit: 10000,
           name: "static/media/[name].[hash:8].[ext]"}
-      }
+      },
+      {
+        test: /\.scss$/,
+        loaders: [
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
+          require.resolve('sass-loader')
+        ]
+      },
     ]
   },
   plugins: [new HtmlWebpackPlugin({template: "./src/index.html"})]

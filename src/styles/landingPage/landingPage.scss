@@ -1,0 +1,54 @@
+@import "../variables";
+
+.BCN-landingPage{
+  height:100%;
+}
+
+.BCN-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.BCN-container-cards{
+  cursor: pointer;
+  margin-bottom: 5%;
+  background: #fff;
+  height: 225px;
+  width: 225px;
+  min-height: 225px;
+  min-width: 225px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: $fastTransition;
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  align-items: center;
+  color: #fff;
+  user-select: none;
+}
+
+.BCN-container-cards:hover{
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.BCN-container-card-text{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.70);
+  font-size: 34pt;
+  transition: $midTransition;
+}
+
+.BCN-container-card-text:hover{
+  font-size: 35pt;
+
+  background: rgba(0, 0, 0, 0.20);
+}
+
