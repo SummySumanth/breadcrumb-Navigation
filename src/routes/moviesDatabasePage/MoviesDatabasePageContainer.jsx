@@ -1,6 +1,9 @@
 import React,{ Component } from 'react';
+
 import { connect } from 'react-redux';
+
 import breadCrumbActions from '../../actions/breadCrumb/breadCrumbActions'
+
 
 import MoviesPage from '../../components/moviesPage/moviesPage';
 
@@ -14,6 +17,7 @@ class MoviesPageContainer extends Component{
     this.props.updateBreadCrumb(navParts);
   }
 
+
   render(){
     return(
       <div className={'BCN-landingPage'}>
@@ -24,14 +28,13 @@ class MoviesPageContainer extends Component{
 }
 
 
-const mapStateToProps = state => () =>{
-  console.log('state at MOVIEPAGECONTAINER map state to props', state);
-  return {
-    breadCrumbNav : state.breadcrumbNav,
-  }
-};
+const mapStateToProps = state => ({
+  // biometricResults: state.biometricResults,
+});
+
 const mapDispatchToProps = dispatch => ({
   updateBreadCrumb : payload => dispatch(breadCrumbActions.update(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesPageContainer);
+

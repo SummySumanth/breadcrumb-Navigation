@@ -6,6 +6,7 @@
   "engines": {
     "node": "10.3.0"
   },
+  "TMDBimageUrl": "http://image.tmdb.org/t/p/w185//",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production && node server.js"
@@ -23,6 +24,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "history": "^4.9.0",
+    "immutable": "^4.0.0-rc.12",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
