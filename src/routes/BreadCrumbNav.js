@@ -5,7 +5,7 @@ class Breadcrumbnav extends Component{
   render(){
     return(
       <div className={'BCN-navbar-container'}>
-        I am navigator
+        HOME
       </div>
     );
   }

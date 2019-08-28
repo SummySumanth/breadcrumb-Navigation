@@ -16,6 +16,11 @@ const LandingPage = Loadable({
   loading: MyLoadingComponent,
 });
 
+const MoviesPage = Loadable({
+  loader: () => import('./routes/moviesPage/MoviesPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+
 class Routes extends Component{
   render(){
     return(
@@ -25,7 +30,7 @@ class Routes extends Component{
           <Route exact path='/' render={() => (    <Redirect to="/landing" />      )}/>
           <Route exact path='/landing' component={LandingPage}/>
 
-          <Route path='/landing/movies' component={LandingPage}/>
+          <Route path='/landing/movies' component={MoviesPage}/>
         </Switch>
       </Router>
     )

@@ -10,7 +10,8 @@ class MoviesPageContainer extends Component{
   render(){
     return(
       <div className={'BCN-landingPage'}>
-        <MoviesPage/>
+        hello123
+        {/*<MoviesPage/>*/}
       </div>
     );
   }
