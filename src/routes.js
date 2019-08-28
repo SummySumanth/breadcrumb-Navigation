@@ -21,22 +21,42 @@ const MoviesPage = Loadable({
   loading: MyLoadingComponent,
 });
 
+const MusicPage = Loadable({
+  loader: () => import('./routes/musicPage/MusicPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+
+const GamesPage = Loadable({
+  loader: () => import('./routes/gamesPage/GamesPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+
+const NewsPage = Loadable({
+  loader: () => import('./routes/newsPage/NewsPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+
 class Routes extends Component{
   render(){
     return(
       <Router history={history}>
-
-        {/*<Switch>*/}
-
-          <BreadCrumbNav/>
-
-
+        <BreadCrumbNav/>
+        <Switch>
           <Route exact path='/' render={() => (    <Redirect to="/home" />      )}/>
           <Route exact path='/home' component={LandingPage}/>
 
           <Route path='/home/movies' component={MoviesPage}/>
           <Route path='/home/movies/database' component={MoviesPage}/>
-        {/*</Switch>*/}
+
+          <Route path='/home/music' component={MusicPage}/>
+          <Route path='/home/music/database' component={MusicPage}/>
+
+          <Route path='/home/games' component={GamesPage}/>
+          <Route path='/home/games/database' component={GamesPage}/>
+
+          <Route path='/home/news' component={NewsPage}/>
+          <Route path='/home/news/database' component={NewsPage}/>
+        </Switch>
       </Router>
     )
   }

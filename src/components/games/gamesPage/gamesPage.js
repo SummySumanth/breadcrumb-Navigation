@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 
-import '../../styles/landingPage/landingPage.scss';
+import '../../../styles/landingPage/landingPage.scss';
 import { action, documentary, drama, fiction, horror, mystery, romantic, thriller} from '../../assets/images/movieGenres/'
 class LandingPage extends Component{
 
@@ -57,7 +57,7 @@ class LandingPage extends Component{
   render(){
     return(
       <div className={'BCN-container'}>
-        <div  className={'BCN-container-header'}>SELECT YOUR MOVIE GENRE !</div>
+        <div  className={'BCN-container-header'}>LET THE GAMING BEGIN !</div>
         <div  className={'BCN-cards-container'}>
 
           {this.getMovieGenresComponents(this.movieGenres())}

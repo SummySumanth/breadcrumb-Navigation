@@ -1,8 +1,11 @@
 import React,{ Component } from 'react';
-import { connect } from 'react-redux';
-import breadCrumbActions from '../../actions/breadCrumb/breadCrumbActions'
 
-import MoviesPage from '../../components/moviesPage/moviesPage';
+import { connect } from 'react-redux';
+
+import breadCrumbActions from '../../../actions/breadCrumb/breadCrumbActions'
+
+
+import MoviesPage from '../../../components/movies/moviesPage/moviesPage';
 
 // import '../../styles/landingPage/landingPage.scss';
 
@@ -14,6 +17,7 @@ class MoviesPageContainer extends Component{
     this.props.updateBreadCrumb(navParts);
   }
 
+
   render(){
     return(
       <div className={'BCN-landingPage'}>
@@ -24,8 +28,8 @@ class MoviesPageContainer extends Component{
 }
 
 
-const mapStateToProps = state =>({
-
+const mapStateToProps = state => ({
+  // biometricResults: state.biometricResults,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -33,3 +37,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesPageContainer);
+
