@@ -22,26 +22,21 @@ const MoviesPage = Loadable({
 });
 
 class Routes extends Component{
-  constructor(props){
-    super(props);
-    const navParts = window.location.pathname.split("/");
-    navParts.shift();
-    this.state = {
-      nav : navParts,
-    }
-  }
-
   render(){
     return(
       <Router history={history}>
-        <BreadCrumbNav navParts={this.state.nav}/>
-        <Switch>
+
+        {/*<Switch>*/}
+
+          <BreadCrumbNav/>
+
+
           <Route exact path='/' render={() => (    <Redirect to="/home" />      )}/>
           <Route exact path='/home' component={LandingPage}/>
 
           <Route path='/home/movies' component={MoviesPage}/>
           <Route path='/home/movies/database' component={MoviesPage}/>
-        </Switch>
+        {/*</Switch>*/}
       </Router>
     )
   }

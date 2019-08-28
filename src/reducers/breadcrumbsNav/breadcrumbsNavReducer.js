@@ -6,9 +6,7 @@ const intialState = {
 
 const breadcrumbNavReducer = (state = intialState, action) => {
   switch(action.type){
-    case breadCrumbActionTypes.UPDATE_BREADCRUMB:
-      console.log('👾👾👾state & action at breadcrumb reducer',state, action);
-      // return { ...state, navs : action.payload};
+    case breadCrumbActionTypes.UPDATE_BREADCRUMB: return { ...state, navs : action.payload};
     default: return state;
   };
 }

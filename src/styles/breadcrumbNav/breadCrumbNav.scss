@@ -1,7 +1,36 @@
+@import "../variables";
+
 .BCN-navbar-container{
   background: #fff;
   padding: 20px;
+  padding-left: 40px;
   position: absolute;
   width: 100%;
+  display: flex;
   box-shadow: 0px -9px 25px 6px rgba(0, 0, 0, 0.19);
+}
+
+.BCN-navbar-item{
+  font-size: 16pt;
+  color: #00c0ff;
+  margin: 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.BCN-navbar-img {
+  transition: $slowTransition;
+  transform: scale(0.7);
+  margin-left: 12px;
+}
+
+.BCN-navbar-item:hover{
+  filter: brightness(1.2);
+}
+
+.BCN-navbar-item:hover .BCN-navbar-img{
+  transform: translateX(-110px) scale(1.3) rotateY(180deg);
 }

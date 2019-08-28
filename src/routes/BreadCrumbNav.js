@@ -1,36 +1,54 @@
 import React,{ Component } from 'react';
 import { connect } from 'react-redux';
-
+import { withRouter } from 'react-router-dom'
+import { rightArrow } from '../assets/images/common/'
 import '../styles/breadcrumbNav/breadCrumbNav.scss'
 
 class Breadcrumbnav extends Component{
 
-  getLinks = () =>{
-    return(
-      <div>HELLLLLL</div>
-    )
+  constructNavigationPath = (location, navs) =>{
+    const indexOfLocation = navs.indexOf(location);
+    if(indexOfLocation === navs.length -1 ){
+      return navs.join('/');
+    }
+    navs.splice(indexOfLocation)
+    return navs.join('/');
   };
 
+  onNavigateClick = (location, navs) =>{
+    const naviagtionPath = this.constructNavigationPath(location, navs);
+    this.props.history.push(`/${naviagtionPath}`);
+  };
+
+  getLinks = navs => {
+    return navs.map((item, index, arr) => {
+      return (
+        <div className={'BCN-navbar-item'} onClick={() => this.onNavigateClick(item, arr)} key={item}>
+          {item}
+          <img className={'BCN-navbar-img'} src={rightArrow}/>
+        </div>
+      )
+    });
+  };
+
+
   render(){
-    console.log('PROPS AT BREAD CRUMB NAV ARE', this.props);
+    const { navs } = this.props.breadCrumbNav;
     return(
       <div className={'BCN-navbar-container'}>
-        {this.getLinks()}
+        {this.getLinks(navs)}
       </div>
     );
   }
 }
 
-const mapStateToProps = state => () =>{
-    console.log('state at BREADCRUMB map state to props', state);
-    return {
+const mapStateToProps = state =>({
       breadCrumbNav : state.breadcrumbNav,
-    }
-};
+});
 
 const mapDispatchToProps = dispatch => ({
   // updateBreadCrumb : past => dispatch(breadCrumbActions.update),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Breadcrumbnav);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Breadcrumbnav));
 

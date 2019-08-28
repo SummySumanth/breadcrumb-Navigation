@@ -24,12 +24,10 @@ class MoviesPageContainer extends Component{
 }
 
 
-const mapStateToProps = state => () =>{
-  console.log('state at MOVIEPAGECONTAINER map state to props', state);
-  return {
-    breadCrumbNav : state.breadcrumbNav,
-  }
-};
+const mapStateToProps = state =>({
+
+});
+
 const mapDispatchToProps = dispatch => ({
   updateBreadCrumb : payload => dispatch(breadCrumbActions.update(payload)),
 });

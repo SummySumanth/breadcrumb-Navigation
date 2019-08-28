@@ -14,7 +14,6 @@ class LandingPageContainer extends Component{
   componentDidMount(){
     const navParts = window.location.pathname.split("/");
     navParts.shift();
-    console.log('DISPATCHING AT LANDING PAGE WITH NAVPARTS',navParts);
     this.props.updateBreadCrumb(navParts);
   }
 
@@ -29,12 +28,10 @@ class LandingPageContainer extends Component{
   }
 }
 
-const mapStateToProps = state => () =>{
-  console.log('state at LANDINGPAGECONTAINER map state to props', state);
-  return {
-    breadCrumbNav : state.breadcrumbNav,
-  }
-};
+const mapStateToProps = state =>({
+
+});
+
 const mapDispatchToProps = dispatch => ({
   updateBreadCrumb : payload => dispatch(breadCrumbActions.update(payload)),
 });
