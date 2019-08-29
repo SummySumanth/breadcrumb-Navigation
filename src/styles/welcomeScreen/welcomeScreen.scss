@@ -1,0 +1,164 @@
+@import "../variables";
+
+a.nostyle:link {
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+}
+
+.WelcomeScreen{
+  position: absolute;
+  background: #000000ad;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0px 1px 210px 20px rgba(0, 0, 0, 0.33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.WelcomeScreenHide{
+
+}
+
+.ModalContainer{
+  color: #000;
+  height: 70%;
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.ContentHolder{
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  color: #212121;
+}
+
+.ModalSubHeader{
+  width: 75%;
+  margin: 0px auto;
+  color: #5a5a5a;
+  text-align: center;
+  font-size: 10pt;
+}
+
+.ModalBody{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0px 20px;
+}
+
+.divider{
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #cecece;
+  margin: 15px 0px;
+}
+
+.ModalBody-header{
+  margin-bottom: 15px;
+}
+.TechBlock{
+  display: flex;
+  width: 100%;
+  background: #efefef;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.TechBlock-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.TechUsedContainer{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  flex: 1 1 0%;
+}
+
+.TechUsedContainerLinks{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
+  flex: 0 1 0%;
+  cursor: pointer;
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+
+.TechUsedContainerLinks:hover{
+  background: #d4d4d4;
+}
+
+.TechUsedImage{
+  height: 35px;
+  width: 35px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.TechUsedTextContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.TechUsedText{
+  user-select: none;
+  white-space: nowrap;
+}
+
+.TechUsedTextVersion{
+  font-size: 7pt;
+  text-align: left;
+  width: 100%;
+  cursor: default;
+  color: #949494;
+}
+
+.modalCloseBtn{
+  background: #d0d0d0;
+  text-align: center;
+  width: 30%;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: $slowTransition;
+}
+
+.modalCloseBtn:hover{
+  background: #4da9ff;
+  color: #fff;
+}
+

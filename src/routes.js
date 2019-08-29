@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import history from './routes/history';
 import BreadCrumbNav from './routes/BreadCrumbNav'
+import WelcomeScreen from './routes/WelcomeScreen';
 import Loadable from 'react-loadable';
 
 // import LandingPage from './routes/landingPage/LandingPage';
@@ -20,6 +21,7 @@ const MoviesPage = Loadable({
   loader: () => import('./routes/movies/moviesPage/MoviesPageContainer.jsx'),
   loading: MyLoadingComponent,
 });
+
 const MoviesDetailsPage = Loadable({
   loader: () => import('./routes/movies/moviesDatabasePage/MoviesDatabasePageContainer.jsx'),
   loading: MyLoadingComponent,
@@ -54,9 +56,25 @@ const NewsDetailsPage = Loadable({
 });
 
 class Routes extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      showModal : true
+    };
+  }
+
+  onModalClose = () =>{
+      console.log('Closing modal');
+    this.setState({
+      showModal : false
+    })
+  };
+
   render(){
     return(
       <Router history={history}>
+        { this.state.showModal ? <WelcomeScreen onModalClose={this.onModalClose} /> : <div></div> }
         <BreadCrumbNav/>
         <Switch>
           <Route exact path='/' render={() => (    <Redirect to="/home" />      )}/>

@@ -1,7 +1,8 @@
 import React,{ Component } from 'react';
 
 import '../../../styles/landingPage/landingPage.scss';
-import { action, documentary, drama, fiction, horror, mystery, romantic, thriller} from '../../../assets/images/movieGenres/'
+import { action, documentary, drama, fiction, horror, mystery, romantic, thriller} from '../../../assets/images/movieGenres/';
+
 class moviesPage extends Component{
 
   movieGenres = () =>([
@@ -65,7 +66,7 @@ class moviesPage extends Component{
         <div  className={'BCN-container-header'}>SELECT YOUR MOVIE GENRE !</div>
         <div  className={'BCN-cards-container'}>
 
-          {/*{this.getMovieGenresComponents(this.movieGenres())}*/}
+          {this.getMovieGenresComponents(this.movieGenres())}
 
         </div>
       </div>
@@ -73,4 +74,4 @@ class moviesPage extends Component{
   }
 }
 
-export default LandingPage;
+export default moviesPage;

@@ -1,55 +1,50 @@
 import React,{ Component } from 'react';
 
 import '../../../styles/landingPage/landingPage.scss';
-import { action, documentary, drama, fiction, horror, mystery, romantic, thriller} from '../../../assets/images/movieGenres/'
+import { blues, country, folk, jazz, metal, rock} from '../../../assets/images/musicGenres/'
 class musicPage extends Component{
 
   movieGenres = () =>([
     {
-      name : 'Romantic',
-      image : romantic,
+      name : 'Rock',
+      image : rock,
       id: 10749,
     },
     {
-      name : 'Action',
-      image : action,
+      name : 'Jazz',
+      image : jazz,
       id: 28
     },
     {
-      name : 'Horror',
-      image : horror,
+      name : 'Folk',
+      image : folk,
       id : 27,
     },
     {
-      name : 'Fiction',
-      image : fiction,
+      name : 'Country',
+      image : country,
       id : 878,
     },
     {
-      name : 'Thriller',
-      image : thriller,
+      name : 'Blues',
+      image : blues,
       id : 53,
     },
     {
-      name : 'Drama',
-      image : drama,
+      name : 'Metal',
+      image : metal,
       id : 18,
     },
-    {
-      name : 'Mystery',
-      image : mystery,
-      id : 9648
-    }
   ]);
 
   getMovieGenresComponents = (geners) =>{
     return geners.map(item =>(
       <div key={item.id}
         className={'BCN-container-innerPage-cards'}
-        // style={{ backgroundImage: `url('/${item.image}')`}}
+        style={{ backgroundImage: `url('/${item.image}')`}}
         // onClick={()=> this.onClickHandler('movies')}
       >
-        {/*<div className={'BCN-container-innerPage-card-text'}>{item.name}</div>*/}
+        <div className={'BCN-container-innerPage-card-text'}>{item.name}</div>
       </div>
     ))
   };
