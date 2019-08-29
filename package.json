@@ -9,7 +9,7 @@
   "TMDBimageUrl": "http://image.tmdb.org/t/p/w185//",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && node server.js"
   },
   "repository": {
     "type": "git",

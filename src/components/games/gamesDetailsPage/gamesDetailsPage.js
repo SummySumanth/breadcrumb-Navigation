@@ -4,6 +4,44 @@ import '../../../styles/landingPage/landingPage.scss';
 import { action, documentary, drama, fiction, horror, mystery, romantic, thriller} from '../../../assets/images/movieGenres/'
 class gamesDetailsPage extends Component{
 
+  movieGenres = () =>([
+    {
+      name : 'Politics',
+      image : politcs,
+      id: 1,
+    },
+    {
+      name : 'Bollywood',
+      image : bollywood,
+      id: 2,
+    },
+    {
+      name : 'Sports',
+      image : sports,
+      id: 3,
+    },
+    {
+      name : 'Medical',
+      image : medical,
+      id: 4,
+    },
+    {
+      name : 'Tech',
+      image : tech,
+      id: 5,
+    },
+    {
+      name : 'Music',
+      image : music,
+      id: 6,
+    },
+    {
+      name : 'Local',
+      image : local,
+      id: 7,
+    },
+  ]);
+
   render(){
     return(
       <div className={'BCN-container'}>

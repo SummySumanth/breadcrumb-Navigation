@@ -15,7 +15,7 @@ class MoviesPageContainer extends Component{
 
   navigationHandler = gener =>{
     this.props.selectGener(gener);
-    this.props.history.push(`${this.props.location.pathname}/database`);
+    this.props.history.push(`${this.props.location.pathname}/details`);
   };
 
   render(){

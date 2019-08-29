@@ -81,7 +81,7 @@ class WelcomeScreen extends Component{
       {
         name: 'LinkedIn',
         image: linkedin,
-        url: 'https://doc-00-b8-docs.googleusercontent.com/docs/securesc/2cc653fd9a2316eo26qud4hlmagvvfls/v0d2acu55qfv8lvtkdbfgc72dctdhjs9/1567058400000/07228212941672975888/07228212941672975888/15NLPJRtuUdQ_I0YoKjeNBX7J0TRDMlX0?e=download&nonce=5j5qdup8qarjg&user=07228212941672975888&hash=i7e2imuoqetqoa5lv4c81gv'
+        url: 'https://www.linkedin.com/in/sumanthba/'
       },
 
     ];
@@ -123,6 +123,17 @@ class WelcomeScreen extends Component{
                       {this.getProjectLinks()}
                     </div>
                   </div>
+
+                  <p className={'ModalBody-header'}>Few pointers about this project :</p>
+                  <div className={'TechBlock'}>
+                    <div className={'TechBlock-container'} style={{ justifyContent: 'flex-start', padding: '10px 30px', textAlign: 'left'}}>
+                      <ul>
+                        <li style={{padding: '6px 0px'}}>This project was built from scratch, using personally built boilerplate. No create-react-app used !</li>
+                        <li>No css frameworks used, all the styles and animations are handwritten !</li>
+                      </ul>
+                    </div>
+                  </div>
+
                 </div>
             </div>
           <div className={'divider'}></div>

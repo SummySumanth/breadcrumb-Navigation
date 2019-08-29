@@ -14,10 +14,15 @@ class MoviesPageContainer extends Component{
     this.props.updateBreadCrumb(navParts);
   }
 
+  navigationHandler = topic =>{
+    // this.props.selectGener(gener);
+    this.props.history.push(`${this.props.location.pathname}/details`);
+  };
+
   render(){
     return(
       <div className={'BCN-landingPage'}>
-        <NewsPage/>
+        <NewsPage onClickHandler={this.navigationHandler}/>
       </div>
     );
   }
