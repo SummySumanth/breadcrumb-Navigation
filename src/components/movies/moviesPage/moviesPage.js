@@ -49,7 +49,7 @@ class moviesPage extends Component{
         key={item.id}
         className={'BCN-container-innerPage-cards'}
         style={{ backgroundImage: `url('/${item.image}')`}}
-        onClick={()=> this.navigationHandler(item.id)}
+        onClick={()=> this.props.navigationHandler(item.id)}
       >
         <div className={'BCN-container-innerPage-card-text'}>{item.name}</div>
       </div>

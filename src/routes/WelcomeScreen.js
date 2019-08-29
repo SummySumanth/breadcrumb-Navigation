@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { rightArrow } from '../assets/images/common/';
-import { react, redux, reduxLogger, reduxThunk, webpack, sass, github,running, man, linkedin} from '../assets/images/welcomePage/';
+import { react, redux, reduxLogger, reduxThunk, webpack, sass, github,running, man, linkedin, es6} from '../assets/images/welcomePage/';
 import '../styles/welcomeScreen/welcomeScreen.scss';
 
 class WelcomeScreen extends Component{
@@ -39,6 +39,11 @@ class WelcomeScreen extends Component{
         image: sass,
         version: ''
       },
+      {
+        name: 'ES6',
+        image: es6,
+        version: ''
+      },
     ];
 
     return tech.map(item =>{
@@ -71,7 +76,7 @@ class WelcomeScreen extends Component{
       {
         name: 'View Resume',
         image: man,
-        url: 'https://doc-00-b8-docs.googleusercontent.com/docs/securesc/2cc653fd9a2316eo26qud4hlmagvvfls/v0d2acu55qfv8lvtkdbfgc72dctdhjs9/1567058400000/07228212941672975888/07228212941672975888/15NLPJRtuUdQ_I0YoKjeNBX7J0TRDMlX0?e=download&nonce=5j5qdup8qarjg&user=07228212941672975888&hash=i7e2imuoqetqoa5lv4c81gv'
+        url: 'https://drive.google.com/file/d/15NLPJRtuUdQ_I0YoKjeNBX7J0TRDMlX0/view'
       },
       {
         name: 'LinkedIn',
@@ -105,7 +110,7 @@ class WelcomeScreen extends Component{
 
                 <div className={'ModalBody'}>
 
-                  <p className={'ModalBody-header'}>Libraries and Buildtools used in this project :</p>
+                  <p className={'ModalBody-header'}>What's used in this project :</p>
                   <div className={'TechBlock'}>
                     <div className={'TechBlock-container'}>
                       {this.getTechsUsed()}

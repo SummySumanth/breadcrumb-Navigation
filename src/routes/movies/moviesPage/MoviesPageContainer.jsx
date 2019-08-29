@@ -12,10 +12,16 @@ class MoviesPageContainer extends Component{
     this.props.updateBreadCrumb(navParts);
   }
 
+  navigationHandler = () =>{
+    console.log('Navigation Clicked');
+    this.props.history.push(`${this.props.location.pathname}/database`);
+  };
+
   render(){
+    console.log('prop at movie page container are', this.props);
     return(
       <div className={'BCN-landingPage'}>
-        <MoviesPage />
+        <MoviesPage navigationHandler={this.navigationHandler} />
       </div>
     );
   }

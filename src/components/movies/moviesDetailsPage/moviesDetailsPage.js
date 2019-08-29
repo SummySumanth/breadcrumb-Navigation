@@ -7,7 +7,7 @@ class moviesDetailsPage extends Component{
   render(){
     return(
       <div className={'BCN-container'}>
-        <div  className={'BCN-container-header'}>SELECT YOUR MOVIE GENRE !</div>
+        <div  className={'BCN-container-header'}>GENER MOVIES !</div>
         <div  className={'BCN-cards-container'}>
 
           <div

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import breadCrumbActions from '../../../actions/breadCrumb/breadCrumbActions'
 
 
-import NewsDetailsPage from '../../../components/news/newsDetailsPage/newsDetailsPage';
+import MoviesDetailsPage from '../../../components/movies/moviesDetailsPage/moviesDetailsPage';
 
 // import '../../styles/landingPage/landingPage.scss';
 
@@ -21,7 +21,7 @@ class MoviesPageContainer extends Component{
   render(){
     return(
       <div className={'BCN-landingPage'}>
-        <NewsDetailsPage/>
+        <MoviesDetailsPage />
       </div>
     );
   }

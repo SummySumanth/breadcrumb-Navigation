@@ -80,17 +80,17 @@ class Routes extends Component{
           <Route exact path='/' render={() => (    <Redirect to="/home" />      )}/>
           <Route exact path='/home' component={LandingPage}/>
 
-          <Route path='/home/movies' component={MoviesPage}/>
-          <Route path='/home/movies/database' component={MoviesDetailsPage}/>
+          <Route exact path='/home/movies' component={MoviesPage}/>
+          <Route exact path='/home/movies/database' component={MoviesDetailsPage}/>
 
-          <Route path='/home/music' component={MusicPage}/>
-          <Route path='/home/music/database' component={MusicDetailsPage}/>
+          <Route exact path='/home/music' component={MusicPage}/>
+          <Route exact path='/home/music/database' component={MusicDetailsPage}/>
 
-          <Route path='/home/games' component={GamesPage}/>
-          <Route path='/home/games/database' component={GamesDetailsPage}/>
+          <Route exact path='/home/games' component={GamesPage}/>
+          <Route exact path='/home/games/database' component={GamesDetailsPage}/>
 
-          <Route path='/home/news' component={NewsPage}/>
-          <Route path='/home/news/database' component={NewsDetailsPage}/>
+          <Route exact path='/home/news' component={NewsPage}/>
+          <Route exact path='/home/news/database' component={NewsDetailsPage}/>
         </Switch>
       </Router>
     )
