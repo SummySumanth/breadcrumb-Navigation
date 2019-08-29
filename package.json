@@ -9,7 +9,7 @@
   "TMDBimageUrl": "http://image.tmdb.org/t/p/w185//",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production && node server.js"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,8 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sass-loader": "^7.3.1"
+    "sass-loader": "^7.3.1",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

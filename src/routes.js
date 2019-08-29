@@ -65,7 +65,6 @@ class Routes extends Component{
   }
 
   onModalClose = () =>{
-      console.log('Closing modal');
     this.setState({
       showModal : false
     })

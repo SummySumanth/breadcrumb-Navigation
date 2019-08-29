@@ -5,9 +5,10 @@ import { action, documentary, drama, fiction, horror, mystery, romantic, thrille
 class moviesDetailsPage extends Component{
 
   render(){
+    const { generName } = this.props;
     return(
       <div className={'BCN-container'}>
-        <div  className={'BCN-container-header'}>GENER MOVIES !</div>
+        <div  className={'BCN-container-header'}>{generName} Movies !</div>
         <div  className={'BCN-cards-container'}>
 
           <div

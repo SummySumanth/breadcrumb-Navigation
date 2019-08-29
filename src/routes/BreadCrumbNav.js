@@ -11,7 +11,7 @@ class Breadcrumbnav extends Component{
     if(indexOfLocation === navs.length -1 ){
       return navs.join('/');
     }
-    navs.splice(indexOfLocation)
+    navs.splice(indexOfLocation+1);
     return navs.join('/');
   };
 

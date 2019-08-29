@@ -123,9 +123,9 @@ class WelcomeScreen extends Component{
                       {this.getProjectLinks()}
                     </div>
                   </div>
-
                 </div>
             </div>
+          <div className={'divider'}></div>
           <div className={'modalCloseBtn'} onClick={this.props.onModalClose}>LET'S GO !</div>
         </div>
       </div>

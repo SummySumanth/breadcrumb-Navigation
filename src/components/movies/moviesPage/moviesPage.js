@@ -56,10 +56,6 @@ class moviesPage extends Component{
     ))
   };
 
-  componentDidMount(){
-    console.log('Movies page mounted');
-  }
-
   render(){
     return(
       <div className={'BCN-container'}>

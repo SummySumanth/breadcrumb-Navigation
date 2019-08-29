@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import { connect } from 'react-redux';
-import breadCrumbActions from '../../../actions/breadCrumb/breadCrumbActions'
+import breadCrumbActions from '../../../actions/breadCrumb/breadCrumbActions';
+import moviePageAction from '../../../actions/moviePage/moviePageActions';
 
 import MoviesPage from '../../../components/movies/moviesPage/moviesPage';
 
@@ -12,13 +13,12 @@ class MoviesPageContainer extends Component{
     this.props.updateBreadCrumb(navParts);
   }
 
-  navigationHandler = () =>{
-    console.log('Navigation Clicked');
+  navigationHandler = gener =>{
+    this.props.selectGener(gener);
     this.props.history.push(`${this.props.location.pathname}/database`);
   };
 
   render(){
-    console.log('prop at movie page container are', this.props);
     return(
       <div className={'BCN-landingPage'}>
         <MoviesPage navigationHandler={this.navigationHandler} />
@@ -34,6 +34,7 @@ const mapStateToProps = state =>({
 
 const mapDispatchToProps = dispatch => ({
   updateBreadCrumb : payload => dispatch(breadCrumbActions.update(payload)),
+  selectGener : payload => dispatch(moviePageAction.selectGener(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesPageContainer);
