@@ -44,15 +44,20 @@ class moviesPage extends Component{
 
   getMovieGenresComponents = (geners) =>{
     return geners.map(item =>(
-      <div key={item.id}
+      <div
+        key={item.id}
         className={'BCN-container-innerPage-cards'}
         style={{ backgroundImage: `url('/${item.image}')`}}
-        // onClick={()=> this.onClickHandler('movies')}
+        onClick={()=> this.navigationHandler(item.id)}
       >
         <div className={'BCN-container-innerPage-card-text'}>{item.name}</div>
       </div>
     ))
   };
+
+  componentDidMount(){
+    console.log('Movies page mounted');
+  }
 
   render(){
     return(
@@ -60,7 +65,7 @@ class moviesPage extends Component{
         <div  className={'BCN-container-header'}>SELECT YOUR MOVIE GENRE !</div>
         <div  className={'BCN-cards-container'}>
 
-          {this.getMovieGenresComponents(this.movieGenres())}
+          {/*{this.getMovieGenresComponents(this.movieGenres())}*/}
 
         </div>
       </div>
@@ -68,4 +73,4 @@ class moviesPage extends Component{
   }
 }
 
-export default moviesPage;
+export default LandingPage;

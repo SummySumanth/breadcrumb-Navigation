@@ -36,7 +36,10 @@ class Breadcrumbnav extends Component{
     const { navs } = this.props.breadCrumbNav;
     return(
       <div className={'BCN-navbar-container'}>
-        {this.getLinks(navs)}
+        <div className={'BCN-navbar-wrapper'}>
+          {this.getLinks(navs)}
+        </div>
+
       </div>
     );
   }

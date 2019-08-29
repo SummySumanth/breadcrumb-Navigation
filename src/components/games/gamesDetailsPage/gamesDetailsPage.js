@@ -12,10 +12,10 @@ class gamesDetailsPage extends Component{
 
           <div
             className={'BCN-container-innerPage-cards'}
-            style={{ backgroundImage: `url('/${item.image}')`}}
+            // style={{ backgroundImage: `url('/${item.image}')`}}
             // onClick={()=> this.onClickHandler('movies')}
           >
-            <div className={'BCN-container-innerPage-card-text'}>{item.name}</div>
+            {/*<div className={'BCN-container-innerPage-card-text'}>{item.name}</div>*/}
           </div>
 
         </div>

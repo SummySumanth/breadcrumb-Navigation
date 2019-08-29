@@ -2,12 +2,15 @@
 
 .BCN-navbar-container{
   background: #fff;
-  padding: 20px;
-  padding-left: 40px;
   position: absolute;
   width: 100%;
-  display: flex;
   box-shadow: 0px -9px 25px 6px rgba(0, 0, 0, 0.19);
+}
+
+.BCN-navbar-wrapper{
+  padding: 20px;
+  padding-left: 40px;
+  display: flex;
 }
 
 .BCN-navbar-item{

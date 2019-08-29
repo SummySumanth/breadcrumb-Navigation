@@ -46,10 +46,10 @@ class musicPage extends Component{
     return geners.map(item =>(
       <div key={item.id}
         className={'BCN-container-innerPage-cards'}
-        style={{ backgroundImage: `url('/${item.image}')`}}
+        // style={{ backgroundImage: `url('/${item.image}')`}}
         // onClick={()=> this.onClickHandler('movies')}
       >
-        <div className={'BCN-container-innerPage-card-text'}>{item.name}</div>
+        {/*<div className={'BCN-container-innerPage-card-text'}>{item.name}</div>*/}
       </div>
     ))
   };

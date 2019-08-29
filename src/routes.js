@@ -5,7 +5,7 @@ import BreadCrumbNav from './routes/BreadCrumbNav'
 import Loadable from 'react-loadable';
 
 // import LandingPage from './routes/landingPage/LandingPage';
-
+ import './styles/index.scss';
 
 function MyLoadingComponent() {
   return <div>Loading...</div>;
@@ -17,22 +17,39 @@ const LandingPage = Loadable({
 });
 
 const MoviesPage = Loadable({
-  loader: () => import('./routes/moviesPage/MoviesPageContainer.jsx'),
+  loader: () => import('./routes/movies/moviesPage/MoviesPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+const MoviesDetailsPage = Loadable({
+  loader: () => import('./routes/movies/moviesDatabasePage/MoviesDatabasePageContainer.jsx'),
   loading: MyLoadingComponent,
 });
 
 const MusicPage = Loadable({
-  loader: () => import('./routes/musicPage/MusicPageContainer.jsx'),
+  loader: () => import('./routes/music/musicPage/MusicPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+const MusicDetailsPage = Loadable({
+  loader: () => import('./routes/music/musicDatabasePage/MusicDatabasePageContainer.jsx'),
   loading: MyLoadingComponent,
 });
 
 const GamesPage = Loadable({
-  loader: () => import('./routes/gamesPage/GamesPageContainer.jsx'),
+  loader: () => import('./routes/games/gamesPage/GamesPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+const GamesDetailsPage = Loadable({
+  loader: () => import('./routes/games/gamesDatabasePage/GamesDatabasePageContainer.jsx'),
   loading: MyLoadingComponent,
 });
 
 const NewsPage = Loadable({
-  loader: () => import('./routes/newsPage/NewsPageContainer.jsx'),
+  loader: () => import('./routes/news/newsPage/NewsPageContainer.jsx'),
+  loading: MyLoadingComponent,
+});
+
+const NewsDetailsPage = Loadable({
+  loader: () => import('./routes/news/newsDatabasePage/NewsDatabasePageContainer.jsx'),
   loading: MyLoadingComponent,
 });
 
@@ -46,16 +63,16 @@ class Routes extends Component{
           <Route exact path='/home' component={LandingPage}/>
 
           <Route path='/home/movies' component={MoviesPage}/>
-          <Route path='/home/movies/database' component={MoviesPage}/>
+          <Route path='/home/movies/database' component={MoviesDetailsPage}/>
 
           <Route path='/home/music' component={MusicPage}/>
-          <Route path='/home/music/database' component={MusicPage}/>
+          <Route path='/home/music/database' component={MusicDetailsPage}/>
 
           <Route path='/home/games' component={GamesPage}/>
-          <Route path='/home/games/database' component={GamesPage}/>
+          <Route path='/home/games/database' component={GamesDetailsPage}/>
 
           <Route path='/home/news' component={NewsPage}/>
-          <Route path='/home/news/database' component={NewsPage}/>
+          <Route path='/home/news/database' component={NewsDetailsPage}/>
         </Switch>
       </Router>
     )
